@@ -37,7 +37,6 @@ trails-ms
 
 
 
-
 --> TRAE LA RUTA DE UN ID EN ESPECIFICO (ID --> es el ID de la base de datos ejemplo = 5d013616fb689d0001d1ccd9)
     |
     |-->   (POST)  -- http://192.168.99.101:3002/trails/{ ID }
