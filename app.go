@@ -170,22 +170,22 @@ func main() {
 	r := mux.NewRouter()
 	
 	// CREA UNA NUEVA RUTA
-	r.HandleFunc("/trails", CreateTrailEndpoint).Methods("POST")
+	r.HandleFunc("/trails-ms", CreateTrailEndpoint).Methods("POST")
 
 	// OBTIENE TODAS LAS RUTAS DE LA TABLA DE DATOS
-	r.HandleFunc("/trails", AllTrailsEndpoint).Methods("GET")
+	r.HandleFunc("/trails-ms", AllTrailsEndpoint).Methods("GET")
 
 	// OBTIENE TODAS LAS RUTAS DE UN USUARIO
-	r.HandleFunc("/trails/user/{id}", FindTrailsByUserEndpoint).Methods("GET")
+	r.HandleFunc("/trails-ms/user/{id}", FindTrailsByUserEndpoint).Methods("GET")
 
 	// OBTIENE UNA RUTA EN ESPECIFICO
-	r.HandleFunc("/trails/{id}", FindTrailByIdEnpoint).Methods("GET")
+	r.HandleFunc("/trails-ms/{id}", FindTrailByIdEnpoint).Methods("GET")
 	
 	// BORRA TODAS LAS RUTAS DE UN USUARIO
-	r.HandleFunc("/trails/user/{id}", DeleteTrailsEndPoint).Methods("DELETE")
+	r.HandleFunc("/trails-ms/user/{id}", DeleteTrailsEndPoint).Methods("DELETE")
 
 	// BORRA UNA RUTA EN ESPECIFICO
-	r.HandleFunc("/trails/{id}", DeleteTrailByIdEndPoint).Methods("DELETE")
+	r.HandleFunc("/trails-ms/{id}", DeleteTrailByIdEndPoint).Methods("DELETE")
 
 	if err := http.ListenAndServe(":3002", r); err != nil {
 		log.Fatal(err)
