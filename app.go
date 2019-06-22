@@ -108,7 +108,7 @@ func FindTrailsByUserEndpoint(w http.ResponseWriter, r *http.Request) {
 	params := mux.Vars(r)
 	trails, err := dao.FindTrailsByUser(params["id"])
 	if err != nil {
-		respondWithError(w, http.StatusBadRequest, "Invalid Movie ID")
+		respondWithError(w, http.StatusBadRequest, "Invalid Trail ID")
 		return
 	}
 	respondWithJson(w, http.StatusOK, trails)
@@ -124,7 +124,7 @@ func FindTrailByIdEnpoint(w http.ResponseWriter, r *http.Request) {
 	params := mux.Vars(r)
 	trail, err := dao.FindTrailById(params["id"])
 	if err != nil {
-		respondWithError(w, http.StatusBadRequest, "Invalid Movie Id")
+		respondWithError(w, http.StatusBadRequest, "Invalid Trail Id")
 		return
 	}
 	respondWithJson(w, http.StatusOK, trail)
