@@ -1,2 +1,2 @@
-server="mongodb"
+server="trails-db"
 database="trails_db"
